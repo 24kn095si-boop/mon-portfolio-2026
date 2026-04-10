@@ -193,3 +193,410 @@ footer a:hover{
     color:var(--orange-vif);
     transform:translateY(-3px);
 }
+
+
+
+/* --- SECTION DIVERTISSEMENT --- */
+
+.divertissement {
+    padding: 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.divertissement-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card {
+    background: var(--gris-clair);
+    padding:20px;
+}
+
+.cards :hover {
+    background-color:#e7d5d5;
+}
+
+
+.divertissement .intro {
+    text-align: center;
+    color: var(--gris-fonce);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+.divertissement h3 {
+    color:var(--violet-fonce);
+    line-height : 1.6;
+    font-family: Roboto, sans-serif;
+}
+.card img {
+    border-radius : 15px ;
+    width : 300px;
+    border-bottom : 3px solid #534EDD;
+    }
+ 
+
+
+/* Effet spécial pour différencier du reste */
+.divertissement .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 2rem;
+    justify-content: space-between;
+    justify-self: center;
+    text-align: justify;
+}
+
+/* Glow léger au hover */
+.divertissement .card:hover {
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.3);
+}
+
+/* Effet overlay stylé */
+.divertissement .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(108,99,255,0.2), transparent);
+    transition: 0.5s;
+    align-items: center;
+}
+
+.divertissement .card:hover::before {
+    left: 100%;
+}
+
+/* Boutons plus fun */
+.divertissement .icons a {
+    background-color:var(--violet-doux);
+    color: rgb(184, 181, 192);
+    padding: 6px 12px;
+    border-radius: 10px;
+    
+}
+
+.divertissement .icons a:hover {
+    background-color:var(--orange-vif);
+}
+
+/* Tags plus stylés */
+.divertissement .tags {
+    color: var(--gris-tres-fonce);
+}
+
+
+
+
+/* --- SECTION PASSIONS --- */
+
+.passions {
+    padding: 20px 50px;   
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+
+.passions .intro {
+    text-align: center;
+    color: var(--gris-tres-fonce);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+.passions h3{
+    color: var(--violet-fonce);
+}
+
+/* Effet spécial doux */
+.passions .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 25px;
+    align-self: start;
+    padding: 2rem;
+    align-items: center;
+}
+
+.passions .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Couleur différente pour distinguer */
+.passions .tags {
+    color: var(--orange-vif);
+}
+
+
+/* --- PAGE CONTACT --- */ 
+ 
+.contact-container {     
+    min-height: 90vh;     
+    background-color: #f0f2f5; 
+    /* Motif géométrique discret inspiré des textiles africains */ 
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://w3.org d='M30 0l30 30L30 60 0 30z' fill='%236c63ff' fill-opacity='0.03' fillrule='evenodd'/%3E%3C/svg%3E"); 
+    display: flex;     
+    justify-content: center;  
+    align-items: center;     
+    padding: 2rem; 
+} 
+ 
+.contact-wrapper {     
+    width: 100%;     
+    max-width: 1000px; 
+    background: #ffffff;    
+    border-radius: 24px;     
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); 
+    display: flex;     
+    overflow: hidden; 
+    /* Pour garder les bords arrondis */    
+     height: 700px; 
+} 
+ 
+/* --- COLONNE INFOS (Gauche) --- */ 
+.contact-info { 
+    flex: 1; 
+    background: var(--violet-doux); 
+    color: rgb(20, 20, 20); 
+    padding: 3rem; 
+    display: flex; 
+    flex-direction: column;     
+    justify-content: space-between; 
+} 
+ 
+.contact-info h3 {     
+    font-size: 2rem;     
+    margin-bottom: 2rem; 
+} 
+ 
+.info-item {     
+    margin-bottom: 1.5rem; 
+} 
+ 
+.info-item p {    
+    font-size: 0.9rem;     
+    opacity: 0.8; 
+    margin-bottom: 0.3rem; 
+} 
+ 
+.info-item a {     
+    color: white;     
+    text-decoration: none;     
+    font-size: 1.1rem;     
+    font-weight: 500;     
+    transition: opacity 0.3s; 
+} 
+ 
+.info-item a:hover { 
+    opacity: 0.7; 
+}
+ 
+.whatsapp-link {     
+    display: inline-block; 
+    background: rgb(24, 190, 85);     
+    padding: 10px 20px;     
+    border-radius: 25px;     
+    margin-top: 1rem;     
+    font-size: 0.9rem !important; 
+} 
+ 
+/* --- INTERFACE CHAT IA (Droite) --- */ 
+.contact-form { 
+    flex: 2;     
+    display: flex;     
+    flex-direction: column;     
+    background: var(--gris-tres-clair); 
+} 
+ 
+.chat-header {     
+    padding: 1.5rem 2rem;     
+    border-bottom: 1.5px solid #998d8d;     
+    display: flex;     
+    align-items: center;     
+    gap: 15px; 
+} 
+ 
+.chat-avatar {     
+    width: 40px;     
+    height: 40px; 
+    background: #eee; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center;     
+    align-items: center;     
+    font-weight: bold;     
+    color:var(--violet-fonce); 
+} 
+ 
+.chat-body { 
+    flex: 1; 
+    padding: 2rem;     
+    overflow-y: auto; 
+    display: flex;     
+    flex-direction: column;     
+    gap: 1.5rem; 
+} 
+ 
+/* Bulles de message style IA */ 
+.bubble {     
+    max-width: 80%;     
+    padding: 12px 18px;     
+    border-radius: 18px;     
+    font-size: 0.95rem;     
+    line-height: 1.4; 
+} 
+ 
+.bubble.ai {     
+    background: var(--gris-clair); 
+    align-self: center;     
+    border-bottom-left-radius: 4px; color:var(--gris-tres-fonce); 
+}
+ 
+/* Style des champs input comme des bulles de saisie */ 
+.chat-input-area {     
+    padding: 1.5rem 2rem;     
+    border-top: 1px solid #eee6e6c9; 
+    display: flex;     
+    flex-direction: column;     
+    gap: 10px; 
+} 
+ 
+.chat-input-area input,  .chat-input-area textarea {     
+    width: 100%;     
+    border: 1px solid var(--gris-fonce);     
+    padding: 12px 15px;     
+    border-radius: 12px;     
+    font-family: inherit;     
+    outline: none;     
+    transition: border 0.3s;     
+    background: #b6b3b3; 
+} 
+ 
+.chat-input-area input:focus,  .chat-input-area textarea:focus {     
+    border-color: var(--violet-doux);     
+    background: var(--gris-clair); 
+} 
+ 
+.btn-send { 
+    align-self: flex-end; 
+    background:var(--violet-fonce);
+    color: var(--gris-fonce); 
+    border: none;     
+    padding: 10px 25px;     
+    border-radius: 50px;     
+    cursor: pointer;     
+    font-weight: 600; 
+    display: flex;     
+    align-items: center;     
+    gap: 8px;     
+    transition: transform 0.2s; 
+} 
+ 
+.btn-send:hover {     
+    transform: scale(1.05);     
+    background: var(--violet-doux); 
+} 
+ 
+/* Responsive */ 
+@media (max-width: 850px) {     
+    .contact-wrapper {         
+        flex-direction: column;         
+        height: auto; 
+    } 
+    .contact-info {         
+        padding: 2rem; 
+    } 
+} 
+
+
+
+/* SECTION PROJETS */
+.projets { 
+    padding: 20px 50px;
+}
+/* GRID */
+.projets-container {   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+/* CARTE */
+.carte { 
+    background: #fff; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+    transition: 0.3s;
+}
+.carte:hover { 
+    transform: translateY(-5px);
+    background-color:#e7d5d5 ;
+}
+/* IMAGE + LIGNE VIOLETTE */
+.carte img { 
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+    display: block; border-bottom: 4px solid #6c63ff;
+}
+/* CONTENU */
+.contenu { 
+    padding: 15px;
+}
+.contenu h3 { 
+    color: #6c63ff; 
+    margin-bottom: 10px;
+}
+.contenu p { 
+    font-size: 14px; 
+    color: #555;
+}
+.carte img{
+    border-radius : 15px ;
+    width : 400px;
+    border-bottom : 3px solid #534EDD
+}
+/* TAGS */
+.tags { margin: 10px 0;
+}
+.tags span { 
+    background: #eef0ff; 
+    color: #6c63ff; 
+    padding: 5px 12px; 
+    margin: 5px 5px 0 0; 
+    display: inline-block; 
+    border-radius: 6px; 
+    font-size: 12px; 
+    font-weight: 500;
+}
+/* LIENS */
+.liens { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 10px;
+}
+.liens a {
+    text-decoration: none; 
+    color: #333; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    gap: 5px;
+}
+.liens a:hover { 
+    color: #6c63ff;
+}
+.liens i { font-size: 14px;
+}
+
+
+
+
+
+ 
+ 
